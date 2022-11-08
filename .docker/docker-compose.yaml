@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  turbo:
+    build:
+      context: .
+    ports:
+      - "9000:3000"
+    volumes:
+      - .data/cache:/apps/cache/turbo
+    env_file:
+      - .env
